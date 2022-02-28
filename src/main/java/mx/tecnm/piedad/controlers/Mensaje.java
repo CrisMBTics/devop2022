@@ -28,7 +28,7 @@ import mx.tecnm.piedad.dao.UsuarioJDBC;
 public class Mensaje {
 	
 	@Autowired
-	UsuarioJDBC repo;
+	UsuarioJDBC repo;  //hello
 	
 	@PostMapping("/login")
     public ResponseEntity<?> autenticar(@RequestParam String email, @RequestParam String password){
