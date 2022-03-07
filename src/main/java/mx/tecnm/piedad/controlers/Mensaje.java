@@ -62,9 +62,9 @@ public class Mensaje {
 
             return "Bearer " + token;
 
-}
-	
-        
+
+
+	}        
     @GetMapping("/hola")
 	public String saludar () {
 		return "¡Hola WS!";
