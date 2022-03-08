@@ -27,8 +27,7 @@ public class ActoresJDBC {
 	}
 	
 	
-	public Actores Consultar (int id) {
-
+		public Actores Consultar (int id) {
         String sql="SELECT * FROM actores WHERE id= ?";
         return conexion.queryForObject(sql, new ActoresRM(), id);
 
