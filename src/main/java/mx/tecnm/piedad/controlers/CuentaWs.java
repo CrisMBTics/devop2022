@@ -21,6 +21,8 @@ import mx.tecnm.piedad.models.Cuenta;
 @RequestMapping("/api")
 @CrossOrigin(origins = "*", methods= {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.PATCH})
 
+// prueba xd
+
 public class CuentaWs {
 	
 	@Autowired
