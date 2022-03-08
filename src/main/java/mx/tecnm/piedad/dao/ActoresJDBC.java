@@ -15,11 +15,33 @@ public class ActoresJDBC {
 	
 	
 	public int insert (Actores nuevo_actor) {
-        String sql = "INSERT INTO actores (id, nombre_completo) VALUES (?, ?)";
-        conexion.update(sql, nuevo_actor.getId(), nuevo_actor.getNombreCompleto());
+        String sql = "INSERT INTO actores (nombre_completo) VALUES (?)";
+        conexion.update(sql, nuevo_actor.getNombreCompleto());
         sql = "SELECT LAST_INSERT_ID()";
         return conexion.queryForObject(sql, Integer.class);
 	}
+	
+	public void modifi(int id, Actores actores) {
+		String sql = "UPDATE actores SET nombre_completo = ?,  WHERE id = ?";
+		conexion.update(sql, actores.getNombreCompleto(), id);
+	}
+	
+	
+	public Actores Consultar (int id) {
+
+        String sql="SELECT * FROM actores WHERE id= ?";
+        return conexion.queryForObject(sql, new ActoresRM(), id);
+
+    }
+
+	public void desactivar(int id) {
+		// TODO Auto-generated method stub
+		String sql = "UPDATE actores SET activo = 0, eliminado = NOW() WHERE id = ?";
+        conexion.update(sql, id);
+		
+	}
+	
+	
 }
 
 

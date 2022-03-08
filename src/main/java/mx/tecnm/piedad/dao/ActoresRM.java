@@ -18,7 +18,5 @@ public class ActoresRM implements RowMapper<Actores> {
 		return actores;
 		
 	}
-	
-	
 
 }
