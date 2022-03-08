@@ -3,6 +3,7 @@ package mx.tecnm.piedad.models;
 public class Actores {
 	private int id;
 	private String nombre_completo;
+	private int activo;
 	public int getId() {
 		return id;
 	}
@@ -16,9 +17,6 @@ public class Actores {
 		this.nombre_completo = nombre_completo;
 	}
 	
-<<<<<<< HEAD
-	
-	
 	public int getActivo() {
 		return activo;
 	}
@@ -29,9 +27,4 @@ public class Actores {
 
 
 
-	private int id;
-	private String nombre_completo;
-	private int activo;
-=======
->>>>>>> 00c189e0c1a1c03c9b411eb973a7dcd5e5653fbc
 }

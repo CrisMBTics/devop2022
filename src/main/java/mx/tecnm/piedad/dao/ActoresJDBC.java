@@ -15,14 +15,14 @@ public class ActoresJDBC {
 	
 	
 	public int insert (Actores nuevo_actor) {
-        String sql = "INSERT INTO actores (nombre_completo) VALUES (?)";
-        conexion.update(sql, nuevo_actor.getNombre_completo());
+        String sql = "INSERT INTO actores (nombre_completo, activo) VALUES (?, ?)";
+        conexion.update(sql, nuevo_actor.getNombre_completo(), nuevo_actor.getActivo());
         sql = "SELECT LAST_INSERT_ID()";
         return conexion.queryForObject(sql, Integer.class);
 	}
 	
 	public void modifi(int id, Actores actores) {
-		String sql = "UPDATE actores SET nombre_completo = ?  WHERE id = ?";
+		String sql = "UPDATE actores SET nombre_completo = ?, modificado=NOW()  WHERE id = ?";
 		conexion.update(sql, actores.getNombre_completo(), id);
 	}
 	
