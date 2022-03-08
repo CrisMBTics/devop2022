@@ -19,6 +19,19 @@ public class Actores {
 		this.nombre_completo = nombre_completo;
 	}
 	
+	
+	
+	public int getActivo() {
+		return activo;
+	}
+
+	public void setActivo(int activo) {
+		this.activo = activo;
+	}
+
+
+
 	private int id;
 	private String nombre_completo;
+	private int activo;
 }
