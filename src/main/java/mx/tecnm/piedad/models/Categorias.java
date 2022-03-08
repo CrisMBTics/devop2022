@@ -9,21 +9,21 @@ public class Categorias {
 	public int getId() {
 		return id;
 	}
-	public String getClasificacion() {
-		return clasificacion;
-	}
-	public String getDescripcion(){
-		return descripcion;
-	}
-	
 	public void setId(int id) {
 		this.id = id;
 	}
-	public void setClasificacion( String clasificacion) {
+	public String getClasificacion() {
+		return clasificacion;
+	}
+	public void setClasificacion(String clasificacion) {
 		this.clasificacion = clasificacion;
 	}
-	public void setDescripcion(String descripcion){
+	public String getDescripcion() {
+		return descripcion;
+	}
+	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+	
 
 }
