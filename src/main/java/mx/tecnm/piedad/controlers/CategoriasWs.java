@@ -30,6 +30,7 @@ public class CategoriasWs {
 	@PostMapping()
 	public ResponseEntity<?> insert(@RequestBody Categorias nueva_categoria){
 		try {
+			repo.insert(nueva_categoria);
 			return new ResponseEntity<>(HttpStatus.CREATED);
 		}catch(DataAccessException e) {
 			System.out.println(e.getMessage());

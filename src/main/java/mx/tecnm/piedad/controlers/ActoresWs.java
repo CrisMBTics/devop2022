@@ -33,6 +33,7 @@ public class ActoresWs {
 	@PostMapping()
     public ResponseEntity<?> insert(@RequestBody Actores nuevo_actor){
     	try {
+    	repo.insert(nuevo_actor);
     	return new ResponseEntity<>(HttpStatus.CREATED);
     } catch (DataAccessException e) {
     	System.out.println(e.getMessage());
