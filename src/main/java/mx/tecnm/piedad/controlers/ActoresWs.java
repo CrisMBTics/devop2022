@@ -51,7 +51,7 @@ public class ActoresWs {
 	@GetMapping("/{id}")
 	public ResponseEntity<?> consultar(@PathVariable int id){
 		try {
-			Actores resultado = repo.Consultar(id);
+			Actores resultado = repo.consultar(id);
 			return new ResponseEntity<Actores>(resultado, HttpStatus.OK);				
 			} catch (DataAccessException e) {
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);

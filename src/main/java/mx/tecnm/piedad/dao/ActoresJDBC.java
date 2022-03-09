@@ -22,13 +22,13 @@ public class ActoresJDBC {
 	}
 	
 	public void modifi(int id, Actores actores) {
-		String sql = "UPDATE actores SET nombre_completo = ?  WHERE id = ?";
+		String sql = "UPDATE actores SET nombre_completo = ?, modificado=NOW()  WHERE id = ?";
 		conexion.update(sql, actores.getNombre_completo(), id);
 	}
 	
 	
-		public Actores Consultar (int id) {
-        String sql="SELECT * FROM actores WHERE id= ?";
+		public Actores consultar (int id) {
+        String sql="SELECT * FROM actores WHERE id= ? AND activo=1";
         return conexion.queryForObject(sql, new ActoresRM(), id);
 
     }
