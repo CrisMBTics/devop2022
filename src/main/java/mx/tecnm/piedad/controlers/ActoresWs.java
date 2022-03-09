@@ -49,7 +49,7 @@ public class ActoresWs {
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<?> consultar(@PathVariable int id){
+	public ResponseEntity<?> consultar (@PathVariable int id){
 		try {
 			Actores resultado = repo.consultar(id);
 			return new ResponseEntity<Actores>(resultado, HttpStatus.OK);				

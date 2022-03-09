@@ -27,20 +27,15 @@ public class ActoresJDBC {
 	}
 	
 	
-<<<<<<< HEAD
 		public Actores consultar (int id) {
-        String sql="SELECT * FROM actores WHERE id= ? AND activo=1";
-=======
-		public Actores Consultar (int id) {
-        String sql="SELECT * FROM actores consultado = NOW() WHERE id= ?";
->>>>>>> dae746781f39540de2eadacfee03dc993e4ec012
+        String sql="SELECT * FROM actores WHERE id=? AND activo=1";
         return conexion.queryForObject(sql, new ActoresRM(), id);
 
     }
 
 	public void desactivar(int id) {
 		// TODO Auto-generated method stub
-		String sql = "UPDATE actores SET activo = 0, eliminado = NOW() WHERE id = ?";
+		String sql = "UPDATE actores SET activo=0, eliminado=NOW() WHERE id = ?";
         conexion.update(sql, id);
 		
 	}
