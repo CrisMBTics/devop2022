@@ -21,12 +21,12 @@ public class CategoriasJDBC {
 	}
 	
 	public void modifi(int id, Categorias categorias) {
-		String sql="update categorias set clasificacion=?, descripcion=? where id=?";
+		String sql="update categorias set clasificacion=?, descripcion=? modificado = NOW() where id=?";
 		conexion.update(sql, categorias.getClasificacion(), categorias.getDescripcion(), id);
 	}
 	
 	 public Categorias consulta(int id) {
-		 String sql="select * from categorias where id=?";
+		 String sql="select * from categorias consultado=NOW() where id=?";
 		 return conexion.queryForObject(sql, new CategoriasRM(), id);
 	 }
 	 

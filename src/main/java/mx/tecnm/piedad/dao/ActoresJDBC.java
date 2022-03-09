@@ -15,8 +15,8 @@ public class ActoresJDBC {
 	
 	
 	public int insert (Actores nuevo_actor) {
-        String sql = "INSERT INTO actores (nombre_completo, activo) VALUES (?, ?)";
-        conexion.update(sql, nuevo_actor.getNombre_completo(), nuevo_actor.getActivo());
+        String sql = "INSERT INTO actores (nombre_completo) VALUES (?)";
+        conexion.update(sql, nuevo_actor.getNombre_completo());
         sql = "SELECT LAST_INSERT_ID()";
         return conexion.queryForObject(sql, Integer.class);
 	}
@@ -28,7 +28,7 @@ public class ActoresJDBC {
 	
 	
 		public Actores Consultar (int id) {
-        String sql="SELECT * FROM actores WHERE id= ?";
+        String sql="SELECT * FROM actores consultado = NOW() WHERE id= ?";
         return conexion.queryForObject(sql, new ActoresRM(), id);
 
     }
