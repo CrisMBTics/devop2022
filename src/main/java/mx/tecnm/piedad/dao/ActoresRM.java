@@ -15,6 +15,7 @@ public class ActoresRM implements RowMapper<Actores> {
 		Actores actores = new Actores ();
 		actores.setId(rs.getInt("id"));
 		actores.setNombre_completo(rs.getString("nombre_completo"));
+		actores.setActivo(rs.getInt("activo"));
 		return actores;
 		
 	}

@@ -5,7 +5,14 @@ public class Categorias {
 	private int id;
 	private String clasificacion;
 	private String descripcion;
+	private int activo;
 	
+	public int getActivo() {
+		return activo;
+	}
+	public void setActivo(int activo) {
+		this.activo = activo;
+	}
 	public int getId() {
 		return id;
 	}

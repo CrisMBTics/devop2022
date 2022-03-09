@@ -27,8 +27,13 @@ public class ActoresJDBC {
 	}
 	
 	
+<<<<<<< HEAD
 		public Actores consultar (int id) {
         String sql="SELECT * FROM actores WHERE id= ? AND activo=1";
+=======
+		public Actores Consultar (int id) {
+        String sql="SELECT * FROM actores consultado = NOW() WHERE id= ?";
+>>>>>>> dae746781f39540de2eadacfee03dc993e4ec012
         return conexion.queryForObject(sql, new ActoresRM(), id);
 
     }

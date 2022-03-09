@@ -21,12 +21,20 @@ public class CategoriasJDBC {
 	}
 	
 	public void modifi(int id, Categorias categorias) {
+<<<<<<< HEAD
 		String sql="update categorias set clasificacion=?, descripcion=?, modificado =NOW() where id=?";
+=======
+		String sql="update categorias set clasificacion=?, descripcion=? modificado = NOW() where id=?";
+>>>>>>> dae746781f39540de2eadacfee03dc993e4ec012
 		conexion.update(sql, categorias.getClasificacion(), categorias.getDescripcion(), id);
 	}
 	
 	 public Categorias consulta(int id) {
+<<<<<<< HEAD
 		 String sql="select * from categorias where id=? AND activo=1";
+=======
+		 String sql="select * from categorias consultado=NOW() where id=?";
+>>>>>>> dae746781f39540de2eadacfee03dc993e4ec012
 		 return conexion.queryForObject(sql, new CategoriasRM(), id);
 	 }
 	 
