@@ -44,14 +44,19 @@ public class GenerosWs {
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
 	
+	
+	
 	@GetMapping("/{id}")
-	public ResponseEntity<?> consulta(@PathVariable int id){
+	public ResponseEntity<?>consultar(@PathVariable int id){
 		try {
 			Generos resultado=repo.consultar(id);
-			return new ResponseEntity<Generos>(resultado,HttpStatus.OK);
+			return new ResponseEntity<Generos>(resultado, HttpStatus.OK);
 		}catch(DataAccessException e) {
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		}
+		
+		
+		
 	}
 	
 	@DeleteMapping("/{id}")

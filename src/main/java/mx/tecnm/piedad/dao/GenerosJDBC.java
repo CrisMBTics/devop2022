@@ -27,14 +27,13 @@ public class GenerosJDBC {
 	}
 	
 	
-		public Generos consultar (int id) {
+		public Generos consultar(int id) {
         String sql="SELECT * FROM generos WHERE id=? AND activo=1";
         return conexion.queryForObject(sql, new GenerosRM(), id);
 
     }
 
 	public void desactivar(int id) {
-		// TODO Auto-generated method stub
 		String sql = "UPDATE generos SET activo=0, eliminado=NOW() WHERE id = ?";
         conexion.update(sql, id);
 		
