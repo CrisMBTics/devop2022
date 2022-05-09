@@ -22,7 +22,7 @@ import mx.tecnm.piedad.models.Categorias;
 @RequestMapping("api/categorias")
 @CrossOrigin(origins = "*", methods= {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.PATCH})
 
-public class CategoriasWs {
+public class CategoriasWs {//zz
 	
 	@Autowired
 	CategoriasJDBC repo;
