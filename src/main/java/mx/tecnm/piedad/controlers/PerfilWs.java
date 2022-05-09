@@ -26,7 +26,7 @@ import mx.tecnm.piedad.models.Perfil;
 
 public class PerfilWs {
 
-	@Autowired PerfilJDBC repo;
+	@Autowired PerfilJDBC repo; //REPO
 	
 	
 	@PostMapping ("/cuentas/{cuenta-id}/perfiles")
